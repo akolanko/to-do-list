@@ -1,0 +1,28 @@
+/*-----------------FORMS------------------*/
+
+input[type="text"]{
+	width: 609px;
+	font-family: 'Open Sans', 'Helvetica', 'Arial', sans-serif;
+	font-size: 1.2em;
+	font-weight: 300;
+	padding: 7px 10px;
+	border: 1px solid #21bea3;
+	color: #21bea3;
+}
+
+input[type="submit"]{
+	font-family: 'Open Sans', 'Helvetica', 'Arial', sans-serif;
+	font-weight: 300;
+	font-size: .9em;
+	padding: 7px 10px;
+	border: 1px solid #21bea3;
+	background-color: #21bea3;
+	color: #fff;
+	margin: 15px 0 0;
+}
+
+input[type="submit"]:hover{
+	background-color: #fff;
+	color: #21bea3;
+	cursor: pointer;
+}

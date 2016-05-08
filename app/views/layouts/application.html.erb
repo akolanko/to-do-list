@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>UncubedToDo</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+	<div class='page-container'>
+		<div id='flash-container'>
+			<% if flash[:notice] %>
+				<div class="flash notice">
+					<%= flash[:notice] %>
+				</div>
+			<% end %>
+			<% if flash[:alert] %>
+				<div class="flash alert">
+					<%= flash[:alert] %>
+				</div>
+			<% end %>
+		</div>
+		<%= yield %>
+	</div>
+</body>
+</html>

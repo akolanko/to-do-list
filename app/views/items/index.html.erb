@@ -1,0 +1,64 @@
+<h1 id='title'>To Do List</h1>
+<div id='add-task-container'>
+	<div class="form-container">
+		<%= form_for @item do |f| %>
+			<%=f.text_field :task, placeholder: 'Add a task', :maxlength => 30%>
+			<br>
+			<%=f.submit "Add to List", :class => "submit", data: {disable_with: "Submitting..."} %>
+		<% end %>
+	</div>
+</div>
+<div id='sort-options'>
+	<%= sortable "task", "Sort by task name" %>
+	<%= sortable "completed", "Sort by completion" %>
+	<%= sortable "created_at", "Sort by date" %>
+</div>
+<% if @items.first %>
+	<% @items.each_with_index do |item, index| %>
+		<div class="task-container sort-#{item.index}">
+			<%= link_to item_path(item.id), method: :put do %>
+				<% if item.completed == true %>
+					<div class='checkbox checkbox-true'>
+						<div class='check-line check-line-left'>
+						</div>
+						<div class='check-line check-line-right'>
+						</div>
+					</div>
+				<% elsif item.completed == false %>
+					<div class='checkbox checkbox-false'>
+						<div class='check-line check-line-left'>
+						</div>
+						<div class='check-line check-line-right'>
+						</div>
+					</div>
+				<% end %>
+			<% end %>
+			<div class='task-information'>
+				<% if item.completed == true %>
+					<div class='task task-true'>
+						<span style='color:#21bea3;text-decoration:line-through'>
+							<span style='color:#000'><%= item.task %></span>
+						</span>
+					</div>
+				<% elsif item.completed == false %>
+					<div class='task task-false'>
+						<%= item.task %>
+					</div>
+				<% end %>
+				<div class='created-at'>
+					<%= item.created_at.strftime("%b %d, %Y, %l:%M %p") %>
+				</div>
+			</div>
+			<%= link_to item_path(item.id), method: :delete, data: { confirm: "Are you sure you want to delete this task?" }, class: "delete-link" do %>
+				<div class='checkbox delete-box'>
+					<div class='check-line delete-line-left'>
+					</div>
+					<div class='check-line delete-line-right'>
+					</div>
+				</div>
+			<% end %>
+		</div>
+	<% end %>
+<% else %>
+	You currently have no tasks to complete.
+<% end %>

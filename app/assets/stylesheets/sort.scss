@@ -1,0 +1,64 @@
+/*-----------------LINKS------------------*/
+
+#sort-options{
+	margin: 0 auto 30px;
+}
+
+.sort, .current-sort{
+	margin-right: 10px;
+}
+
+.sort:link{
+	color: #fff;
+	border: 1px solid #B5B5B5;
+	background-color: #B5B5B5;
+	padding: 5px 10px;
+	display: inline-block;
+	font-size: .9em;
+}
+
+.sort:visited{
+	color: #fff;
+}
+
+.sort:hover{
+	background-color: #fff;
+	color: #B5B5B5;
+}
+
+.current-sort:link{
+	color: #fff;
+	border: 1px solid #21bea3;
+	background-color: #21bea3;
+	padding: 5px 10px;
+	display: inline-block;
+	font-size: .9em;
+	padding-right: 30px;
+  	background-repeat: no-repeat;
+  	background-position: 95% center;
+}
+
+.current-sort:visited{
+	color: #fff;
+}
+
+.current-sort:hover{
+	background-color: #fff;
+	color: #21bea3;
+}
+
+.asc{
+	background-image: asset-data-url("up_arrow.png"); 
+}
+
+.asc:hover{
+	background-image: asset-data-url("up_arrow_hover.png"); 
+}
+
+.desc{
+	background-image: asset-data-url("down_arrow.png"); 
+}
+
+.desc:hover{
+	background-image: asset-data-url("down_arrow_hover.png"); 
+}

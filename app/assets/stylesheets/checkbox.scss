@@ -1,0 +1,86 @@
+/*-----------------CHECKBOX------------------*/
+
+.checkbox{
+	width: 40px;
+	height: 40px;
+	display: inline-block;
+	margin-right: 20px;
+	position: relative;
+	vertical-align: bottom;
+}
+
+.checkbox-true{
+	background-color: #21bea3;
+}
+
+.checkbox-false{
+	background-color: #cfcfcf;
+}
+
+.checkbox:hover{
+	background-color: #21bea3;
+}
+
+.check-line{
+	position: absolute;
+	width: 3px;
+	background-color: #fff;
+	border-radius:10px;
+}
+
+.check-line-left{
+	height: 18px;
+	top: 15.5px;
+	left: 10px;
+	-moz-transform: rotate(-37deg);
+	-webkit-transform: rotate(-37deg);
+	-o-transform: rotate(-37deg);
+	-ms-transform: rotate(-37deg);
+	transform: rotate(-37deg);
+}
+
+.check-line-right{
+	height: 26px;
+	left: 23px;
+	top: 7.5px;
+	-moz-transform: rotate(40deg);
+	-webkit-transform: rotate(40deg);
+	-o-transform: rotate(40deg);
+	-ms-transform: rotate(40deg);
+	transform: rotate(40deg);	
+}
+
+.checkbox:hover .check-line{
+	background-color: #fff;
+}
+
+.delete-box{
+	background-color: #F75352;
+	margin: 0 0 0 20px;
+}
+
+.delete-box:hover{
+	background-color: #cfcfcf;
+}
+
+.delete-line-right{
+	height: 32px;
+	top: 4px;
+	left: 18px;
+	-moz-transform: rotate(-45deg);
+	-webkit-transform: rotate(-45deg);
+	-o-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+}
+
+.delete-line-left{
+	height: 32px;
+	top: 4px;
+	left: 18px;
+	-moz-transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
