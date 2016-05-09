@@ -13,9 +13,10 @@
 	<%= sortable "completed", "Sort by completion" %>
 	<%= sortable "created_at", "Sort by date" %>
 </div>
+<div class='sort-button'>Sort</div>
 <% if @items.first %>
-	<% @items.each_with_index do |item, index| %>
-		<div class="task-container sort-#{item.index}">
+	<% @items.each do |item| %>
+		<div class="task-container">
 			<%= link_to item_path(item.id), method: :put do %>
 				<% if item.completed == true %>
 					<div class='checkbox checkbox-true'>
