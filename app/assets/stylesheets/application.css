@@ -29,11 +29,11 @@ body{
 	height: 22px;
 	width: 100%;
 	margin: 10px 0;
+	font-weight: 400;
 }
 
 .notice{
 	color: #21bea3;
-	font-weight: 400;
 }
 
 .alert{

@@ -13,6 +13,7 @@
 	<%= sortable "completed", "Sort by completion" %>
 	<%= sortable "created_at", "Sort by date" %>
 </div>
+<div class='tasks-container'>
 <% if @items.first %>
 	<% @items.each do |item| %>
 		<div class="task-container">
@@ -62,3 +63,4 @@
 <% else %>
 	You currently have no tasks to complete.
 <% end %>
+</div>
